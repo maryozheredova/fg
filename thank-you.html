@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Дякуємо за заявку | FG Service — Київ</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#E01C1C;
+  --red-h:#C41515;
+  --black:#0D0D0D;
+  --s1:#141414;
+  --s2:#1A1A1A;
+  --bdr:rgba(255,255,255,0.09);
+  --bdr-r:rgba(224,28,28,0.25);
+  --white:#fff;
+  --gray:#9A9A9A;
+  --gray2:#555;
+  --f:"TT Commons Pro","Neue Haas Grotesk Display","Helvetica Neue",Helvetica,Manrope,system-ui,sans-serif;
+  --r:6px;--rl:10px;
+  --ease:cubic-bezier(.25,.1,.25,1)
+}
+html{-webkit-font-smoothing:antialiased}
+body{
+  font-family:var(--f);background:var(--black);color:var(--white);
+  line-height:1.5;min-height:100vh;
+  display:flex;flex-direction:column
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* NAV — same as main site */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:60px;
+  background:rgba(13,13,13,0.97);
+  border-bottom:1px solid var(--bdr)
+}
+.nav-logo{font-family:var(--f);font-size:16px;font-weight:700;color:var(--white);display:flex;align-items:center;gap:6px}
+.nav-logo .r{color:var(--red)}
+.nav-logo .sep{color:var(--gray2);font-weight:400;margin:0 4px}
+.nav-logo .city{color:var(--gray);font-weight:400;font-size:14px}
+.nav-tel{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--f);font-size:14px;font-weight:500;
+  color:var(--white);padding:0 14px;height:38px;
+  border:1px solid rgba(255,255,255,.18);border-radius:var(--r);
+  transition:border-color .2s
+}
+.nav-tel svg{width:14px;height:14px;stroke:var(--white);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.nav-tel:hover{border-color:rgba(255,255,255,.45)}
+@media(max-width:600px){
+  .nav{padding:0 16px;height:56px}
+  .nav-logo .city{display:none}
+}
+
+/* MAIN CONTENT */
+.main{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;
+  padding:60px 24px;
+  position:relative;
+  overflow:hidden
+}
+/* subtle red glow background */
+.main::before{
+  content:'';position:absolute;
+  width:600px;height:600px;
+  background:radial-gradient(circle, rgba(224,28,28,0.10) 0%, transparent 70%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none
+}
+
+.card{
+  position:relative;z-index:1;
+  max-width:560px;width:100%;
+  text-align:center;
+  background:var(--s1);
+  border:1px solid var(--bdr);
+  border-radius:var(--rl);
+  padding:56px 36px;
+  animation:fadeUp .6s var(--ease) both
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Checkmark icon */
+.check-circle{
+  width:84px;height:84px;
+  margin:0 auto 28px;
+  border-radius:50%;
+  background:rgba(224,28,28,0.1);
+  border:2px solid var(--red);
+  display:flex;align-items:center;justify-content:center
+}
+.check-circle svg{
+  width:40px;height:40px;
+  stroke:var(--red);fill:none;
+  stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round
+}
+
+.thanks-title{
+  font-size:clamp(28px,5vw,40px);
+  font-weight:700;line-height:1.15;
+  color:var(--white);margin-bottom:16px;
+  letter-spacing:-.01em
+}
+.thanks-title .r{color:var(--red)}
+
+.thanks-text{
+  font-size:clamp(15px,2vw,18px);
+  font-weight:400;color:var(--gray);
+  line-height:1.65;margin-bottom:36px;
+  max-width:440px;margin-left:auto;margin-right:auto
+}
+
+.thanks-actions{
+  display:flex;flex-direction:column;gap:12px;
+  max-width:340px;margin:0 auto
+}
+
+.btn-red{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--f);font-size:14px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  color:var(--white);background:var(--red);
+  border:2px solid var(--red);
+  padding:0 26px;height:52px;border-radius:var(--r);
+  cursor:pointer;transition:background .2s,transform .15s;white-space:nowrap
+}
+.btn-red svg{width:15px;height:15px;stroke:var(--white);fill:none;stroke-width:2;flex-shrink:0}
+.btn-red:hover{background:var(--red-h);border-color:var(--red-h);transform:translateY(-2px)}
+
+.btn-ghost{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--f);font-size:14px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  color:var(--white);background:rgba(255,255,255,0.07);
+  border:2px solid rgba(255,255,255,0.28);
+  padding:0 26px;height:52px;border-radius:var(--r);
+  cursor:pointer;transition:background .2s,border-color .2s,transform .15s;white-space:nowrap
+}
+.btn-ghost svg{width:15px;height:15px;stroke:var(--white);fill:none;stroke-width:2;flex-shrink:0}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7);transform:translateY(-2px)}
+
+/* FOOTER — same as main site */
+footer{
+  background:var(--black);border-top:1px solid var(--bdr);
+  padding:22px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px
+}
+.ft-logo{font-size:14px;font-weight:700}
+.ft-logo .r{color:var(--red)}
+.ft-logo .sep,.ft-logo .city{color:var(--gray2);font-weight:400}
+.ft-links{display:flex;gap:16px;flex-wrap:wrap}
+.ft-links a{font-size:13px;font-weight:500;color:var(--gray2);transition:color .2s}
+.ft-links a:hover{color:var(--red)}
+.ft-copy{width:100%;font-size:12px;color:var(--gray2)}
+
+@media(max-width:600px){
+  .card{padding:40px 22px}
+  footer{padding:18px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    <span class="r">FG</span>&nbsp;СЕРВІС
+    <span class="sep">—</span>
+    <span class="city">КИЇВ</span>
+  </div>
+  <a href="tel:+380994789594" class="nav-tel">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.75 1.19 2 2 0 012.75 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.29 6.29l1.08-1.08a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    +38 099 478 95 94
+  </a>
+</nav>
+
+<div class="main">
+  <div class="card">
+    <div class="check-circle">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1 class="thanks-title">Дякуємо! Заявка<br/><span class="r">успішно відправлена</span></h1>
+    <p class="thanks-text">Менеджер зателефонує Вам за вказаним номером, найближчим часом протягом робочого дня.</p>
+    <div class="thanks-actions">
+      <a href="tel:+380994789594" class="btn-red">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.75 1.19 2 2 0 012.75 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.72a16 16 0 006.29 6.29l1.08-1.08a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Зателефонувати зараз
+      </a>
+      <a href="index.html" class="btn-ghost">На головну</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-logo"><span class="r">FG</span> СЕРВІС<span class="sep"> — </span><span class="city">КИЇВ</span></div>
+  <div class="ft-links">
+    <a href="tel:+380994789594">+38 099 478 95 94</a>
+    <a href="https://www.google.com/maps/place/FG+service%7C+%D0%A1%D0%A2%D0%9E,+%D0%BA%D1%83%D0%B7%D0%BE%D0%B2%D0%BD%D0%B8%D0%B9+%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D1%82%D0%B0+%D0%B4%D0%B5%D1%82%D0%B5%D0%B9%D0%BB%D1%96%D0%BD%D0%B3/@50.4025064,30.4061532,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4c9bbbaf1c06b:0xfed669e83ef80403!8m2!3d50.4025064!4d30.4087281!16s%2Fg%2F11rcwdjmy3?authuser=0&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Google Maps</a>
+  </div>
+  <p class="ft-copy">© 2026 FG Service | СТО, кузовний ремонт та детейлінг — Київ, Кільцева дорога, 22</p>
+</footer>
+
+</body>
+</html>
